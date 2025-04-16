@@ -1,0 +1,113 @@
+(a) Shell Commands
+
+Command	Usage
+man	man ls – Displays the manual page for a command
+clear	clear – Clears the terminal screen
+tput	tput cols – Shows number of columns in terminal
+history	history – Displays command history
+(b) User Commands
+
+Command	Usage
+who	who – Shows who is logged in
+whoami	whoami – Prints current username
+which	which ls – Shows path of command binary
+whereis	whereis ls – Shows location of binary, source, and man page
+id	id – Displays user ID, group ID, etc.
+groups	groups – Shows groups current user belongs to
+passwd	passwd – Changes user password
+last	last – Shows last login history
+banner	banner Hello – Prints a large ASCII banner (might need sysvbanner)
+date	date – Shows current date and time
+cal	cal 04 2025 – Shows calendar for April 2025
+bc	bc – Launches basic calculator (type 2+2, then press Enter)
+(c) File Commands
+
+Command	Usage
+ls	ls -l – Lists files in long format
+ln	ln file1 file2 – Creates a hard link
+cp	cp file1 file2 – Copies file1 to file2
+rm	rm file – Removes a file
+mv	mv old new – Moves/renames a file
+chmod	chmod 755 file – Sets file permissions
+chown	chown user:group file – Changes ownership
+cat	cat file – Displays file content
+more	more file – View file page by page
+less	less file – Similar to more but more flexible
+lpr	lpr file – Prints file (on systems with printer)
+touch	touch file – Creates an empty file or updates timestamp
+stat	stat file – Shows detailed file info
+tty	tty – Displays terminal name
+stty	stty -a – Shows terminal settings
+df	df -h – Shows disk space usage
+du	du -sh * – Shows directory sizes
+dfspace	Might not be available on all systems (used on older Unix)
+ulimit	ulimit -a – Shows system limits
+mount	mount – Lists mounted filesystems
+umount	umount /mnt – Unmounts a filesystem
+(d) Directory and Text Commands
+
+Command	Usage
+cd	cd /home – Changes directory
+pwd	pwd – Shows current path
+mkdir	mkdir newdir – Creates directory
+rmdir	rmdir olddir – Removes directory
+head	head file – Shows first 10 lines
+tail	tail file – Shows last 10 lines
+grep	grep "text" file – Searches for text
+wc	wc file – Word, line, character count
+sort	sort file – Sorts file lines
+whatis	whatis ls – One-line description of command
+apropos	apropos network – Search man pages by keyword
+(e) Process Commands
+
+Command	Usage
+ps	ps aux – Lists running processes
+abort	Usually means terminating (use kill or Ctrl+C)
+sleep	sleep 5 – Sleeps for 5 seconds
+bg	bg – Puts a job in background
+jobs	jobs – Lists background jobs
+fg	fg – Brings job to foreground
+kill	kill PID – Kills a process
+(f) File System
+
+Command	Usage
+quota	quota -v – Displays disk usage limits (if enabled)
+df	df -h – Shows disk space
+du	du -sh * – Directory sizes
+gzip	gzip file – Compresses file
+gunzip	gunzip file.gz – Decompresses file
+zcat	zcat file.gz – Views contents of compressed file
+file	file file.txt – Detects file type
+diff	diff file1 file2 – Compares files
+find	find . -name "*.txt" – Searches for files
+mount	mount – Lists mounted filesystems
+(g) Environment Variables
+
+Command	Usage
+echo	echo $HOME – Prints variable value
+printenv	printenv PATH – Prints environment variable
+set	set – Shows all shell variables
+nedit	nedit file – Graphical text editor (might need install)
+source	source ~/.bashrc – Executes file in current shell
+(h) System Status
+
+Command	Usage
+hostname	hostname – Shows system hostname
+uname	uname -a – System info
+w	w – Shows who is logged in and what they're doing
+(i) Networking
+
+Command	Usage
+ifconfig	ifconfig – Shows network interfaces (older)
+ip	ip addr – Replaces ifconfig in newer systems
+ping	ping google.com – Tests network
+nslookup	nslookup google.com – DNS lookup
+netstat	netstat -tuln – Shows ports and connections
+mailx	mailx user@example.com – Send emails (setup needed)
+(j) Reboot and Shutdown
+
+Command	Usage
+shutdown	sudo shutdown now – Immediate shutdown
+halt	sudo halt – Halts the system
+reboot	sudo reboot – Reboots system
+logout / exit	Logs out from terminal session
