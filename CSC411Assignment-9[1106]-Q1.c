@@ -24,34 +24,36 @@ int board[SIZE][SIZE] = {
 int status[11] = {0};
 
 void* check_rows(void* arg) {
-    int seen[SIZE] = {0};
-    int r = ((Params*)arg)->row;
+    for (int r = 0; r < SIZE; ++r) {
+        int seen[SIZE] = {0};  
 
-    for (int c = 0; c < SIZE; ++c) {
-        int val = board[r][c];
-        if (val < 1 || val > 9 || seen[val - 1]++) {
-            pthread_exit(NULL);
+        for (int c = 0; c < SIZE; ++c) {
+            int val = board[r][c];
+            if (val < 1 || val > 9 || seen[val - 1]++) {
+                pthread_exit(NULL);  
+            }
         }
     }
-
-    status[0] = 1;
+    status[0] = 1;  
     pthread_exit(NULL);
 }
+
 
 void* check_columns(void* arg) {
-    int seen[SIZE] = {0};
-    int c = ((Params*)arg)->col;
+    for (int c = 0; c < SIZE; ++c) {
+        int seen[SIZE] = {0};
 
-    for (int r = 0; r < SIZE; ++r) {
-        int val = board[r][c];
-        if (val < 1 || val > 9 || seen[val - 1]++) {
-            pthread_exit(NULL);
+        for (int r = 0; r < SIZE; ++r) {
+            int val = board[r][c];
+            if (val < 1 || val > 9 || seen[val - 1]++) {
+                pthread_exit(NULL);
+            }
         }
     }
-
-    status[1] = 1;
+    status[1] = 1; 
     pthread_exit(NULL);
 }
+
 
 void* check_box(void* arg) {
     int seen[SIZE] = {0};

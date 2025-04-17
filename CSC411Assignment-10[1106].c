@@ -123,7 +123,7 @@ int main() {
             char text[256];
             int position;
             printf("Enter the text to insert: ");
-            getchar(); 
+            getchar();
             fgets(text, sizeof(text), stdin);
             text[strcspn(text, "\n")] = 0; 
 
